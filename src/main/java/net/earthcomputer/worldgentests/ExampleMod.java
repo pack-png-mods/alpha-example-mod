@@ -1,4 +1,4 @@
-package net.fabricmc.example;
+package net.earthcomputer.worldgentests;
 
 import net.fabricmc.api.ModInitializer;
 

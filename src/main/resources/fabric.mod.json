@@ -1,35 +1,27 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "worldgentests",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "World Gen Tests",
+  "description": "World Generation Testing to help us find the pack.png seed",
   "authors": [
-    "Me!"
+    "Earthcomputer"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://earthcomputer.net/",
+    "sources": "https://github.com/Earthcomputer/pack-png-mods/world-gen-tests"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/worldgentests/icon.png",
 
   "environment": "*",
-  "entrypoints": {
-    "main": [
-      "net.fabricmc.example.ExampleMod"
-    ]
-  },
   "mixins": [
-    "modid.mixins.json"
+    "worldgentests.mixins.json"
   ],
 
   "depends": {
     "fabricloader": "0.4.9"
-  },
-  "suggests": {
-    "flamingo": "*"
   }
 }

@@ -16,7 +16,7 @@ buildscript {
 	}
 	dependencies {
 		//Sin² Edition Loom
-		classpath 'com.github.Earthcomputer:fabric-loom:5717c672'
+		classpath 'com.github.Earthcomputer:fabric-loom:7b42eb7b'
 	}
 }
 
@@ -38,7 +38,9 @@ minecraft {
 dependencies {
 	//to change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings loom.alphaMcp('2.2a.1', loom.mediafire('http://www.mediafire.com/file/vwgj80p8n1plrlq/mcp22a.zip'))
+	mappings loom.alphaMcp('2.2a.1', loom.mediafire('http://www.mediafire.com/file/vwgj80p8n1plrlq/mcp22a.zip')) { mappings ->
+		mappings.method 'net/minecraft/src/World', '(III)Z', 'func_708_k', 'canSeeTheSky'
+	}
 	modCompile "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	compile 'com.google.code.gson:gson:2.8.6'
@@ -79,6 +81,10 @@ task sourcesJar(type: Jar, dependsOn: classes) {
 
 jar {
 	from "LICENSE"
+}
+
+remapJar {
+	toMappings = 'official'
 }
 
 // configure the maven publication
