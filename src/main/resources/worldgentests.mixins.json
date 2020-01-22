@@ -5,7 +5,7 @@
   "mixins": [
   ],
   "client": [
-    "MixinMainMenu"
+    "MixinMinecraft"
   ],
   "injectors": {
     "defaultRequire": 1
