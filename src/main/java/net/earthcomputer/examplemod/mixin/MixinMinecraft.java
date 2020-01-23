@@ -1,4 +1,4 @@
-package net.earthcomputer.worldgentests.mixin;
+package net.earthcomputer.examplemod.mixin;
 
 import net.minecraft.client.Minecraft;
 import org.spongepowered.asm.mixin.Mixin;
